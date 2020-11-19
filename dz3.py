@@ -41,3 +41,4 @@ for symbol in my_str:
     if not symbol.isalnum() and symbol !=" ":
         res += symbol
 print(res)
+#fdgerfv
