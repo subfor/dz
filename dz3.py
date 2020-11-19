@@ -6,8 +6,8 @@ print(new_value)
 new_value = 1 if value < 100 else 0
 print(new_value)
 #########
-new_value = "True" if value < 100 else "False"
-#print(type(new_value))
+new_value = True if value < 100 else False
+print(type(new_value))
 print(new_value)
 #########
 my_str = "Test string 123 QWE;+df-"
