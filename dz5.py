@@ -1,4 +1,4 @@
-my_int = 2300400030
+my_int = 230040003000
 # my_int_str = sorted(str(my_int))
 # my_int_str = int("".join(my_int_str))
 # my_int_str = len(str(my_int_str))
