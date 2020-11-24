@@ -14,11 +14,7 @@ print(len_zero)
 my_list_1 = [1,2,3,4,5 ]
 my_list_2 = [10, 15, 20, 25]
 my_result = []
-# for index, value in enumerate(my_list_1):
-    # print(index, value)
-    # if index % 2:
-    #     my_result.append(value)
-    # print(my_list_1[index])
+
 for value_1 in my_list_1:
     if not value_1 % 2:
         my_result.append(value_1)
