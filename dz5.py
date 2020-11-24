@@ -40,3 +40,15 @@ last = my_list.pop()
 my_list.insert(0, last)
 print(my_list)
 ####################
+my_str = "43 больше чем 34 но меньше чем 56"
+my_list = my_str.split(" ")
+tmp = 0
+
+for value in my_list:
+    if value.isdigit():
+        res = tmp + int(value)
+        tmp = res
+        print(tmp)
+print(res)
+
+##################
