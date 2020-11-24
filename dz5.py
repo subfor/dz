@@ -5,10 +5,10 @@ print(count)
 
 #######################
 
-my_int = 23004000300
-print(len(str(my_int)) - len(str(int(str(my_int)[::-1]))))
-# my_int_str = int("".join(my_int_str))
-# my_int_str = len(str(my_int_str))
+my_int = 230040003000
+len_zero = len(str(my_int)) - len(str(int(str(my_int)[::-1])))
+print(len_zero)
+
 ######################
 
 my_list_1 = [1,2,3,4,5 ]
@@ -48,7 +48,6 @@ for value in my_list:
     if value.isdigit():
         res = tmp + int(value)
         tmp = res
-        print(tmp)
 print(res)
 
 ##################
