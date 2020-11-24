@@ -51,3 +51,16 @@ for value in my_list:
 print(res)
 
 ##################
+my_str = 'abcdereryze'
+index_start = 0
+index_stop = 1
+my_list = []
+len_str = len(my_str)
+for value in range(int(len_str // 2)):
+    my_list.append(my_str[index_start] + my_str[index_stop])
+    index_start += 2
+    index_stop += 2
+if len_str % 2:
+    my_list.append(my_str[index_start] + '_')
+print(my_list)
+##################
