@@ -64,3 +64,15 @@ if len_str % 2:
     my_list.append(my_str[index_start] + '_')
 print(my_list)
 ##################
+my_str = "My_long str"
+l_limit = "o"
+r_limit = "t"
+a = my_str.find(l_limit)
+sub_str = my_str[my_str.find(l_limit) + 1:my_str.find(r_limit)]
+print(sub_str)
+##################
+my_str = "My long string"
+l_limit = "o"
+r_limit = "g"
+sub_str = my_str[my_str.find(l_limit) + 1:my_str.rfind(r_limit)]
+print(sub_str)
