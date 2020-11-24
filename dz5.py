@@ -76,3 +76,10 @@ l_limit = "o"
 r_limit = "g"
 sub_str = my_str[my_str.find(l_limit) + 1:my_str.rfind(r_limit)]
 print(sub_str)
+##################
+my_list = [2,4,1,5,3,9,0,7]
+count = 0
+for index, value in enumerate(my_list):
+    if index != 0 and index != len(my_list) - 1 and value > my_list[index - 1] + my_list[index + 1]:
+        count += 1
+print(count)
