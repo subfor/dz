@@ -70,7 +70,6 @@ my_str = "My_long str"
 l_limit = "o"
 r_limit = "t"
 
-a = my_str.find(l_limit)
 sub_str = my_str[my_str.find(l_limit) + 1:my_str.find(r_limit)]
 print(sub_str)
 ##################
