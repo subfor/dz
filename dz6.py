@@ -18,4 +18,17 @@ my_list_new = []
 #         my_list_new.append(value)
 my_list_new = [value for value in my_list if value[0] == "a"]
 print(my_list_new)
-#######################$###
+##########################
+
+my_list = ["aqwed", "23efadf", "dsf4fr", "adesce", "jdffa", "dfgr"]
+my_list_new = []
+
+my_list_new = [value for value in my_list if value.find("a") > -1]
+print(my_list_new)
+##########################
+my_list = ["23", "aqwed", "23efadf", "76", "dsf4fr", "adesce", "jdffa", "7","dfgr"]
+my_list_new = []
+
+my_list_new = [value for value in my_list if value.isdigit()]
+print(my_list_new)
+##########################
