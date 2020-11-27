@@ -32,3 +32,16 @@ my_list_new = []
 my_list_new = [value for value in my_list if value.isdigit()]
 print(my_list_new)
 ##########################
+my_str = "aabccccdrx xx r"
+my_list_new = []
+
+my_set_tmp = list(set(my_str))
+my_set = my_set_tmp.copy()
+my_set.sort()
+my_list_new = [value for value in my_set if my_str.count(value) == 1]
+my_list_new1 = my_list_new.sort()
+# unic_char = "".join(my_list_new)
+
+print(my_str)
+print(my_list_new)
+
