@@ -39,9 +39,13 @@ my_set_tmp = list(set(my_str))
 my_set = my_set_tmp.copy()
 my_set.sort()
 my_list_new = [value for value in my_set if my_str.count(value) == 1]
-my_list_new1 = my_list_new.sort()
-# unic_char = "".join(my_list_new)
-
 print(my_str)
 print(my_list_new)
+#########################
+my_str1 = "aabccccdrx xx r"
+my_str2 = "aa ccd f"
+my_list_new = []
 
+my_list_new = list(set(my_str1).intersection(set(my_str2)))
+print(my_list_new, type(my_list_new))
+###########################
