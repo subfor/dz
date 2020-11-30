@@ -19,9 +19,9 @@ my_list_new = []
 my_list_new = [value for value in my_list if value.find("a") > -1]
 print(my_list_new)
 ##########################
-my_list = [23, "aqwed", "23efadf", 76, "dsf4fr", "adesce", "jdffa", 7, "dfgr"]
+my_list = [23, "aqwed", "23efadf", 76, "dsf4fr", "adesce", "jdffa", 7, "dfgr", "23"]
 
-my_list_new = [value for value in my_list if not str(value).isdigit()]
+my_list_new = [value for value in my_list if not type(value) == int]
 print(my_list)
 print(my_list_new)
 ##########################
