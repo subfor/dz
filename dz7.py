@@ -20,4 +20,22 @@ def my_print(my_str_: str):
 my_str = "I'm the string"
 my_print(my_str)
 ###################################
+persons = [{"name": "John", "age": 35}, {"name": "Bob", "age": 17}, {"name": "Jack", "age": 15},
+           {"name": "Thomas", "age": 45}, {"name": "Richard", "age": 25}, {"name": "Richird", "age": 15}]
 
+ages_list= [value_age.get("age") for  value_age in persons]
+age_min = min(ages_list)
+for index_dict in persons:
+    if index_dict.get("age") == age_min:
+        print(index_dict.get("name"))
+
+names_list = [value_name.get("name") for value_name in persons]
+len_name_max = max([len(name) for name in names_list])
+print("**************************")
+for name in names_list:
+    if len(name) == len_name_max:
+        print(name)
+print("**************************")
+midl_age = sum(ages_list) / len(ages_list)
+print(midl_age)
+###################################
