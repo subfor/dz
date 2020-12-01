@@ -35,6 +35,6 @@ for name in names_list:
     if len(name) == len_name_max:
         print(name)
 print("**************************")
-midl_age = sum(ages_list) // len(ages_list)
-print(midl_age, "лет")
+mid_age = sum(ages_list) // len(ages_list)
+print(mid_age, "лет")
 ###################################
