@@ -7,8 +7,6 @@ print(rand_list)
 
 triangle = {key: tuple(random.randint(-10, 10) for _ in range(2)) for key in "ABCDF"}
 print(triangle)
-print(triangle["A"], type(triangle["A"]))
-
 
 ###################################
 def my_print(my_str_: str):
