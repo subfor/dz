@@ -42,26 +42,25 @@ print(mid_age, "лет")
 my_dict_1 = {'A': 8, 'B': 7, 'C': 5, 'D': 3, 'F': 56}
 my_dict_2 = {'D': 23, 'L': 56, 'C': 23, 'Z': 7, 'Y': 1, 'B': 1}
 
-my_set = list(set(my_dict_1.keys()).intersection(my_dict_2.keys()))
+repeat_keys_dicts = list(set(my_dict_1.keys()).intersection(my_dict_2.keys()))
 print(len(my_dict_1))
-print(my_set)
+print(repeat_keys_dicts)
 
-my_set2 = list(set(my_dict_1.keys()).difference(my_dict_2.keys()))
-print(my_set2)
+unic_keys_dict1 = list(set(my_dict_1.keys()).difference(my_dict_2.keys()))
+print(unic_keys_dict1)
 print(list(my_dict_1.items())[1])
-my_new_dict = {key: my_dict_1[key] for key in my_set2}
+my_new_dict = {key: my_dict_1[key] for key in unic_keys_dict1}
 print(my_new_dict)
 
 dict2 = {}
-one_time_both_keys = list(set(my_dict_1.keys()).difference(my_dict_2.keys())) + list(set(my_dict_2.keys()).difference(my_dict_1.keys()))
-print(one_time_both_keys)
-for key in one_time_both_keys:
+unic_keys_in_dicts = list(set(my_dict_1.keys()).difference(my_dict_2.keys())) + list(set(my_dict_2.keys()).difference(my_dict_1.keys()))
+print(unic_keys_in_dicts)
+for key in unic_keys_in_dicts:
     if key in my_dict_1:
-
         dict2[key] = my_dict_1.get(key)
     else:
         dict2[key] = my_dict_2.get(key)
-for key in my_set:
+for key in repeat_keys_dicts:
     dict2[key] = list((my_dict_1.get(key), my_dict_2.get(key)))
 
 print(dict2)
