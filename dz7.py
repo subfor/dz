@@ -8,6 +8,7 @@ print(rand_list)
 triangle = {key: tuple(random.randint(-10, 10) for _ in range(2)) for key in "ABCDF"}
 print(triangle)
 
+
 ###################################
 def my_print(my_str_: str):
     # print("***", my_str_, "***")
@@ -21,7 +22,7 @@ my_print(my_str)
 persons = [{"name": "John", "age": 35}, {"name": "Bob", "age": 19}, {"name": "Jack", "age": 15},
            {"name": "Thomas", "age": 45}, {"name": "Richard", "age": 25}, {"name": "Richird", "age": 15}]
 
-ages_list= [value_age.get("age") for value_age in persons]
+ages_list = [value_age.get("age") for value_age in persons]
 age_min = min(ages_list)
 for index_dict in persons:
     if index_dict.get("age") == age_min:
@@ -51,7 +52,8 @@ my_new_dict = {key: my_dict_1[key] for key in unic_keys_dict1}
 print(my_new_dict)
 
 dict2 = {}
-unic_keys_in_dicts = list(set(my_dict_1.keys()).difference(my_dict_2.keys())) + list(set(my_dict_2.keys()).difference(my_dict_1.keys()))
+unic_keys_in_dicts = list(set(my_dict_1.keys()).difference(my_dict_2.keys())) + list(
+    set(my_dict_2.keys()).difference(my_dict_1.keys()))
 print(unic_keys_in_dicts)
 for key in unic_keys_in_dicts:
     if key in my_dict_1:
@@ -62,4 +64,3 @@ for key in repeat_keys_dicts:
     dict2[key] = list((my_dict_1.get(key), my_dict_2.get(key)))
 
 print(dict2)
-
