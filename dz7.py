@@ -1,10 +1,11 @@
-import random
+"""изменил импорт"""
+from random import randint
 
-rand_list = [random.randint(1, 100) for _ in range(100)]
+rand_list = [randint(1, 100) for _ in range(100)]
 print(rand_list)
 
 ###################################
-triangle = {key: tuple(random.randint(-10, 10) for _ in range(2)) for key in "ABC"}
+triangle = {key: tuple(randint(-10, 10) for _ in range(2)) for key in "ABC"}
 print(triangle)
 
 
