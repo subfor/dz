@@ -1,9 +1,8 @@
-my_str1 = "aabccccdfrx xx z"
-my_str2 = "aa ccd f z"
-my_list_new = []
+persons = [{"name": "John", "age": 35}, {"name": "Bob", "age": 19}, {"name": "Jack", "age": 15},
+           {"name": "Thomas", "age": 45}, {"name": "Richard", "age": 25}, {"name": "Richird", "age": 15}]
 
-my_unic = set(my_str1).intersection(set(my_str2))
-my_list_new = [value for value in my_unic if my_str1.count(value) == 1 and my_str2.count(value) == 1]
-print(my_str1)
-print(my_str2)
-print(my_list_new)
+ages_list = [value_age.get("age") for value_age in persons]
+age_min = min(ages_list)
+for index_dict in persons:
+    if index_dict.get("age") == age_min:
+        print(index_dict.get("name"))
