@@ -1,11 +1,11 @@
 import os
 
 
-def read_file(domains_file: str):
+def read_domains(domains_file: str):
     with open(os.path.join(path_dir, domains_file), 'r') as file:
         lines = file.readlines()
-    result = [value_line.strip()[1:] for value_line in lines]
-    return result
+    domain_list = [value_line.strip()[1:] for value_line in lines]
+    return domain_list
 
 
 def read_names(names_file: str):
@@ -17,6 +17,6 @@ def read_names(names_file: str):
 
 
 path_dir = "domains"
-print(read_file("domains.txt"))
+print(read_domains("domains.txt"))
 print(read_names("names.txt"))
 
