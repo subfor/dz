@@ -1,7 +1,7 @@
 """изменил импорт"""
 from random import randint
 
-rand_list = [randint(1, 100) for _ in range(100)]
+rand_list = [randint(1, 100) for _ in range(20)]
 print(rand_list)
 
 ###################################
