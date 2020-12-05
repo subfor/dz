@@ -1,7 +1,4 @@
-import sys
 import os
-
-path_dir = "domains"
 
 
 def read_file(file_read: str):
@@ -11,4 +8,5 @@ def read_file(file_read: str):
     return result
 
 
+path_dir = "domains"
 print(read_file("domains.txt"))
