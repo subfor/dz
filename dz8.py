@@ -21,6 +21,7 @@ def read_names(names_file: str):
 def generate_email(count_emails=1):
     my_email_list = []
     for _ in range(count_emails):
+        """Это для себя оставил, работает но с choice думаю лучше"""
         # random_name = read_names('names.txt')[randint(0, len(read_names('names.txt'))-1)].lower()
         # random_domain = read_domains('domains.txt')[randint(0, len(read_domains('domains.txt'))-1)]
         random_name = str(choice(read_names('names.txt'))).lower()
@@ -35,4 +36,5 @@ def generate_email(count_emails=1):
 path_dir = "domains"
 print(read_domains("domains.txt"))
 print(read_names("names.txt"))
-print(generate_email(10))
+generate_email()
+generate_email(5)
