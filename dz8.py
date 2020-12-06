@@ -20,8 +20,8 @@ def read_names(names_file: str):
 
 def generate_email(count_emails=1):
     my_email_list = []
-    names_list = read_names('names.txt')
-    domains_list = read_domains('domains.txt')
+    names_list = read_names("names.txt")
+    domains_list = read_domains("domains.txt")
     for _ in range(count_emails):
         random_name = str(choice(names_list)).lower()
         random_domain = choice(domains_list)
