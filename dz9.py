@@ -1,8 +1,9 @@
+import json
+import csv
 from random import randint, choice, uniform
 from string import ascii_lowercase, digits
 from os import path
-import json
-import csv
+
 
 
 def generate_str():
@@ -31,11 +32,7 @@ def generate_str():
             value[-1] = f"{value[-1][:-1]}{choice('.!?')}"
         # print(*[' '.join(m) for m in mystr], sep=' ')
         flat_list = [item for sublist in mystr for item in sublist]
-        # print(flat_list, len(flat_list))
         result_string = f'{" ".join(flat_list)}\n'
-    # b = list(a)
-    # print(result_string)
-    # print(len(result_string))
     if len(result_string) > 998:
         result_string = f"{result_string[:998 - len(result_string)]}{choice('.!?')}\n"
     return result_string
@@ -49,7 +46,6 @@ def generate_dict():
         random_value_int = randint(-100, 100)
         random_value_float = uniform(0, 1)
         random_dict[random_key] = choice([random_bool, random_value_int, random_value_float])
-        # random_dict[random_key] = random_value
     return random_dict
 
 
@@ -67,10 +63,16 @@ def write_file(file_to_write: str):
             writer = csv.writer(csv_file)
             writer.writerows(data)
     elif ext == ".json":
-        with open(path.join(file_to_write), "w") as file:
-            json.dump(generate_dict(), file)
+        with open(path.join(file_to_write), "w") as json_file:
+            json.dump(generate_dict(), json_file)
+    elif ext == ".txt":
+        with open(path.join(file_to_write), "w") as txt_file:
+            txt_file.write(generate_str())
     else:
         print("Unsupported file format")
 
 
-write_file("ewre1.jsonw")
+write_file("ewre1.jsonqq")
+write_file("ewre1.csv")
+write_file("ewre1.json")
+write_file("ewre1.txt")
