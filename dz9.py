@@ -1,5 +1,8 @@
 from random import randint, choice, uniform
 from string import ascii_lowercase, digits
+from os import path
+import json
+import csv
 
 
 def generate_str():
@@ -50,6 +53,24 @@ def generate_dict():
     return random_dict
 
 
-x = generate_str()
-print(x, len(x))
-print(generate_dict())
+def generete_list():
+    n = range(randint(3, 10))
+    my_list = [[choice("01") for _ in n] for _ in range(randint(3, 10))]
+    return my_list
+
+
+def write_file(file_to_write: str):
+    ext = file_to_write[file_to_write.rfind("."):]
+    if ext == ".csv":
+        with open(path.join(file_to_write), "w") as csv_file:
+            data = generete_list()
+            writer = csv.writer(csv_file)
+            writer.writerows(data)
+    elif ext == ".json":
+        with open(path.join(file_to_write), "w") as file:
+            json.dump(generate_dict(), file)
+    else:
+        print("Unsupported file format")
+
+
+write_file("ewre1.jsonw")
