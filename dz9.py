@@ -33,9 +33,9 @@ def generate_str():
     # b = list(a)
     print(result_string)
     print(len(result_string))
-    if len(a) > 998:
+    if len(result_string) > 998:
         result_string = f"{result_string[:998 - len(a)]}{choice('.!?')}\n"
-    return a
+    return result_string
 for _ in range(3):
     x = generate_str()
     print(x, len(x))

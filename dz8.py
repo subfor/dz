@@ -36,4 +36,4 @@ path_dir = "domains"
 print(read_domains("domains.txt"))
 print(read_names("names.txt"))
 generate_email()
-generate_email(5)
+generate_email(10)
