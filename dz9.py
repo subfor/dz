@@ -1,4 +1,4 @@
-from random import randint, choice
+from random import randint, choice, uniform
 from string import ascii_lowercase, digits
 
 
@@ -31,11 +31,25 @@ def generate_str():
         # print(flat_list, len(flat_list))
         result_string = f'{" ".join(flat_list)}\n'
     # b = list(a)
-    print(result_string)
-    print(len(result_string))
+    # print(result_string)
+    # print(len(result_string))
     if len(result_string) > 998:
-        result_string = f"{result_string[:998 - len(a)]}{choice('.!?')}\n"
+        result_string = f"{result_string[:998 - len(result_string)]}{choice('.!?')}\n"
     return result_string
-for _ in range(3):
-    x = generate_str()
-    print(x, len(x))
+
+
+def generate_dict():
+    random_dict = {}
+    for _ in range(randint(5, 20)):
+        random_bool = choice([True, False])
+        random_key = "".join(choice(ascii_lowercase) for _ in range(5))
+        random_value_int = randint(-100, 100)
+        random_value_float = uniform(0, 1)
+        random_dict[random_key] = choice([random_bool, random_value_int, random_value_float])
+        # random_dict[random_key] = random_value
+    return random_dict
+
+
+x = generate_str()
+print(x, len(x))
+print(generate_dict())
