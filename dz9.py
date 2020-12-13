@@ -5,7 +5,6 @@ from string import ascii_lowercase, digits
 from os import path
 
 
-
 def generate_str():
     mystr = []
     result_string = ""
@@ -22,17 +21,19 @@ def generate_str():
             else:
                 random_sentense.append(random_digit)
         mystr.append(random_sentense)
-        for index, value in enumerate(mystr):
-            if not value[0].isdigit():
-                value[0] = value[0].capitalize()
-            if len(value) >= 3 and index != 0:
-                for _ in range(randint(1, len(value)) // 7):
-                    s = randint(0, len(value) - 1)
-                    value[s] = f"{value[s][:-1]}{choice(',:')}"
-            value[-1] = f"{value[-1][:-1]}{choice('.!?')}"
         # print(*[' '.join(m) for m in mystr], sep=' ')
         flat_list = [item for sublist in mystr for item in sublist]
         result_string = f'{" ".join(flat_list)}\n'
+    for value in mystr:
+        if not value[0].isdigit():
+            value[0] = value[0].capitalize()
+        if len(value) >= 3:
+            for _ in range(randint(1, len(value)) // 3):
+                s = randint(0, len(value) - 1)
+                value[s] = f"{value[s][:-1]}{choice(',:')}"
+        value[-1] = f"{value[-1][:-1]}{choice('.!?')}"
+    flat_list = [item for sublist in mystr for item in sublist]
+    result_string = f'{" ".join(flat_list)}\n'
     if len(result_string) > 998:
         result_string = f"{result_string[:998 - len(result_string)]}{choice('.!?')}\n"
     return result_string
@@ -72,7 +73,9 @@ def write_file(file_to_write: str):
         print("Unsupported file format")
 
 
-write_file("ewre1.jsonqq")
-write_file("ewre1.csv")
-write_file("ewre1.json")
-write_file("ewre1.txt")
+# write_file("ewre1.jsonqq")
+# write_file("ewre1.csv")
+# write_file("ewre1.json")
+# write_file("ewre1.txt")
+a = generate_str()
+print(a, len(a))
