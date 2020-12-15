@@ -28,6 +28,7 @@ def sort_by_death_date(person: dict):
     return data_of_death
 
 
+
 persons = sorted(read_json("data.json"), key=sort_by_text_len)
 print(persons)
 persons = sorted(read_json("data.json"), key=sort_by_name)
