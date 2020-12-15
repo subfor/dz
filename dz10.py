@@ -1,4 +1,5 @@
 import json
+import re
 from os import path
 
 
@@ -19,11 +20,17 @@ def sort_by_name(person: dict):
 
 
 def sort_by_death_date(person: dict):
-    data = person["text"].split(" ")
-    return None
+    data = person["years"]
+    pattern = r"\d+"
+    year = int(re.findall(pattern, data)[1])
+    data_of_death = year * -1 if "BC" in data else year
+    print(data_of_death)
+    return data_of_death
 
 
 persons = sorted(read_json("data.json"), key=sort_by_text_len)
 print(persons)
 persons = sorted(read_json("data.json"), key=sort_by_name)
+print(persons)
+persons = sorted(read_json("data.json"), key=sort_by_death_date)
 print(persons)
