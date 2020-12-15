@@ -28,9 +28,9 @@ def sort_by_death_date(person: dict):
 
 
 print(read_json("data.json"))
-persons = sorted(read_json("data.json"), key=sort_by_text_len)
-print(persons)
 persons = sorted(read_json("data.json"), key=sort_by_name)
 print(persons)
 persons = sorted(read_json("data.json"), key=sort_by_death_date)
+print(persons)
+persons = sorted(read_json("data.json"), key=sort_by_text_len)
 print(persons)
