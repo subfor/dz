@@ -1,18 +1,13 @@
-from random import randint, choice, uniform
-from string import ascii_lowercase, digits
+import re
 
-# random_dict = {}
-# for _ in range(randint(5, 20)):
-#     random_bool = choice([True, False])
-#     random_key = "".join(choice(ascii_lowercase) for _ in range(5))
-#     random_value_digit = choice([randint(-100, 100), uniform(0, 1)])
-#     random_value = choice([random_bool, random_value_digit])
-#     random_dict[random_key] = random_value
-# # my_dict = {"".join(choice(ascii_lowercase) for _ in range(5)): choice([choice([True, False]), choice([randint(-100, 100), uniform(0, 1)])]) for _ in range(randint(5, 20))}
-# print(random_dict)
-# for  value in random_dict:
-#     print(value, random_dict[value])
+my_str = "Server response 2003 from 123.0.0.12, Wrong 123-0-0-12"
 
-n = range(randint(3, 10))
-my_list = [[choice("01") for _ in n] for _ in range(randint(3, 10))]
-print(my_list)
+pattern = r"[0-9]+"  # все числа из строки
+# pattern = r"\d+"
+pattern = r"[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"  # символ . это один любой символ
+
+my_str = "Kolobok 235-234 BC"
+pattern = r"\d+"
+
+result = re.findall(pattern, my_str)
+print(result)
