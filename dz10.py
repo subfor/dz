@@ -24,7 +24,6 @@ def sort_by_death_date(person: dict):
     pattern = r"\d+"
     year = int(re.findall(pattern, data)[1])
     data_of_death = year * -1 if "BC" in data else year
-    print(data_of_death)
     return data_of_death
 
 
