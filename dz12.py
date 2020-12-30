@@ -96,8 +96,8 @@ def write_json(authors_dicts_list, json_authors="authors.json"):
 
 # get_quotes(10)
 write_to_csv(get_quotes(10))
-authors_list = read_authors()
-print(authors_list)
-authors_dict = create_dict_authors(authors_list)
+list_authors = read_authors()
+print(list_authors)
+authors_dict = create_dict_authors(list_authors)
 print(authors_dict)
 write_json(authors_dict)
