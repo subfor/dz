@@ -1,9 +1,9 @@
 import requests
 import csv
-from os import path
-from random import randint
 import re
 import json
+from os import path
+from random import randint
 
 
 def get_quote():
@@ -42,7 +42,7 @@ def get_quotes(count_q=1):
             list_quotes.append(quote)
             list_quotes_csv.append([quote["quoteAuthor"], quote["quoteText"], quote["quoteLink"]])
             count += 1
-            print(quote["quoteAuthor"], ":", quote["quoteText"])
+            # print(quote["quoteAuthor"], ":", quote["quoteText"])
     list_quotes_csv = sorted(list_quotes_csv, key=sort_by_name)
     write_to_csv(list_quotes_csv)
     return list_quotes_csv
@@ -96,8 +96,8 @@ def write_json(authors_dicts_list, json_authors="authors.json"):
 
 # get_quotes(10)
 write_to_csv(get_quotes(10))
-list_authors = read_authors()
-print(list_authors)
-authors_dict = create_dict_authors(list_authors)
+l_authors = read_authors()
+print(l_authors)
+authors_dict = create_dict_authors(l_authors)
 print(authors_dict)
 write_json(authors_dict)
