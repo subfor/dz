@@ -93,7 +93,7 @@ def down(event):
 size = 7
 my_15 = My15(size=size)
 root = Tk()
-root.title(size)
+root.title("15")
 root.geometry(f"{70* size}x{70*size}")
 root.configure(background='black')
 draw_15_table(my_15)
