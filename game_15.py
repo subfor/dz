@@ -90,7 +90,7 @@ def down(event):
     draw_15_table(my_15)
 
 
-size = 5
+size = 7
 my_15 = My15(_size=size)
 root = Tk()
 root.title(size)
