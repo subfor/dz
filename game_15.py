@@ -3,8 +3,8 @@ from tkinter import *
 
 
 class My15:
-    def __init__(self, _size=4):
-        self.size = _size
+    def __init__(self, size=4):
+        self.size = size
         self.my_15 = self._generate_15()
         self.row, self.col = self.get_space()
 
@@ -91,7 +91,7 @@ def down(event):
 
 
 size = 7
-my_15 = My15(_size=size)
+my_15 = My15(size=size)
 root = Tk()
 root.title(size)
 root.geometry(f"{70* size}x{70*size}")
